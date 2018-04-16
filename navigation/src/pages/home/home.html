@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Simple Navigation between Pages in Ionic</h3>
+  <p>To push the Second Page, click the button below.</p>
+  <button ion-button (click)="pushSecondPage()">Push Second Page</button>
+
+  <p>To set the Second Page as root page, click the button below. You won´t be able to pop from there.</p>
+  <button ion-button (click)="rootSecondPage()">Root Second Page</button>
+
+  <p>You can also transfer data while navigating between pages.</p>
+    <ul>
+      <li>Token: {{token}}</li>
+      <li>Firstname: {{firstname}}</li>
+    </ul>
+  <button ion-button (click)="pushThirdPage()">Transfer Token and Firstname</button>
+</ion-content>
