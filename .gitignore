@@ -292,5 +292,5 @@ __pycache__/
 *.DS_STORE
 .DS_STORE
 .sourcemaps/*
-.platforms/*
+platforms
 .plugins/*
