@@ -291,6 +291,8 @@ __pycache__/
 # Extra ignores
 *.DS_STORE
 .DS_STORE
+.sourcemaps
 sourcemaps
 platforms
 plugins
+www
