@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Geolocation
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h5>Turn on GPS</h5>
+  <button ion-button full (click)="getCoordinates()">Get Your Coordinates</button>
+  <p>
+      <strong>Latitude:</strong> {{latitude}}° <br>
+      <strong>Longitude:</strong> {{longitude}}° <br>
+      <strong>Accuracy:</strong> {{accuracy}}m <br>
+      <strong>Altidude:</strong> {{altitude}}m <br>
+      <strong>Altitude Accuracy:</strong> {{altitudeAccuracy}}m <br>
+      <strong>Heading:</strong> {{heading}}° <br>
+      <strong>Speed:</strong> {{speed}}m/s
+  </p>
+  
+  <br><br>
+
+  {{error}}
+</ion-content>
