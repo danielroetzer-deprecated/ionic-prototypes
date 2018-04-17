@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      NFC - {{platform}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+
+  <button ion-button full (click)="check()">Check if NFC is available</button>
+
+  <button ion-button full (click)="init()">Init() - Adds a listener</button>
+
+  <button ion-button (click)="begin()">Begin() - Start Reading Ndef-Tag on IOS</button>
+
+
+  <br><br>
+
+  <p>Payload: {{payload}}</p>
+
+  <br><br>
+
+  <button ion-button disabled full color="danger" (click)="begin()">Begin2()</button>
+</ion-content>
