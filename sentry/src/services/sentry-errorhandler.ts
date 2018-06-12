@@ -2,7 +2,7 @@ import { IonicErrorHandler } from 'ionic-angular';
 import Raven from 'raven-js';
 
 Raven
-    .config('YOUR DNS HERE',
+    .config('YOUR DSN HERE',
     {
       release: '1.0.0',
       dataCallback: data => {
