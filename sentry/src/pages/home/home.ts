@@ -19,4 +19,8 @@ export class HomePage {
     throw new Error('Project: sentry-test, home.ts, produceError2 ...🐛');
   }
 
+  consoleError() {
+    console.error("Console Error Triggered?");
+  }
+
 }
