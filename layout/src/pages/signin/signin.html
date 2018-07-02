@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Sign In</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label floating>Username (E-mail)</ion-label>
+      <ion-input type="text" name="username" [(ngModel)]="username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password" name="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+    <br>
+
+    <button ion-button full type="submit">Sign in</button>
+  </form>
+
+  <br><br>
+  <!-- Show user if there is an error-->
+  <!--<span name="print_error" [(ngModel)]="error"></span>-->
+  {{error | json}}
+</ion-content>
