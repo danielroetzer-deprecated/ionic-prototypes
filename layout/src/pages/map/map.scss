@@ -1,0 +1,38 @@
+page-map {
+  .scroll {
+    height: 100%
+  }
+
+  #map {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  #fab_button_locate {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 5;
+  }
+
+  #fab_button_rest {
+    position: absolute;
+    top: 0px;
+    right: 45px;
+    z-index: 5;
+  }
+
+  #fab_button_cafe {
+    position: absolute;
+    top: 0px;
+    right: 90px;
+    z-index: 5;
+  }
+
+  #ion_list {
+    position: relative;
+    margin: 0 !important;
+    z-index: 100;
+  }
+}

@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Bluetooth Printer
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-list-header><strong>Selected Printer:</strong> {{printer_name}}</ion-list-header>
+
+    <button ion-item full (click)="selectDevice()">
+        <ion-icon name="list" item-start></ion-icon>
+        Select Bluetooth Printer
+    </button>
+
+    <button ion-item full (click)="printTestPage()">
+        <ion-icon name="print" item-start></ion-icon>
+        Print Test Page
+    </button>
+
+    <br>
+
+    <ion-list-header>Print your own text</ion-list-header>
+
+    <ion-textarea id="textarea" placeholder="Place Text Here" [(ngModel)]="textarea"></ion-textarea>
+    <button ion-item full (click)="printCustomPage()"><ion-icon name="print"></ion-icon> Print Your Text</button>
+
+    <br><br>
+    <button ion-item full color="danger" (click)="encodeData()">(Alpha) Print Barcode</button>
+
+  </ion-list>
+</ion-content>

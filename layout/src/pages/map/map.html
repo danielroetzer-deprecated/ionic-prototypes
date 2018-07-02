@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar>
+    <form (ngSubmit)="onSearch()">
+        <ion-searchbar [showCancelButton]="shouldShowCancel" name="search" (ionInput)="placesAutocomplete()" [(ngModel)]="search"></ion-searchbar>
+    </form>
+
+  </ion-navbar>
+
+  <ion-list id="ion_list">
+      <ion-item *ngFor="let place of places" (touchstart)="selectPlace(place)">{{place.description}}</ion-item>
+  </ion-list>
+
+</ion-header>
+
+
+<ion-content>
+  <div #map id="map"></div>
+  <ion-fab id="fab_button_locate">
+    <button ion-fab mini (click)="getUserPosition()"><ion-icon name="locate"></ion-icon></button>
+  </ion-fab>
+  <ion-fab id="fab_button_rest">
+    <button ion-fab mini (click)="getNearbyPlaces(['restaurant'])"><ion-icon name="restaurant"></ion-icon></button>
+  </ion-fab>
+  <ion-fab id="fab_button_cafe">
+    <button ion-fab mini (click)="getNearbyPlaces(['cafe'])"><ion-icon name="cafe"></ion-icon></button>
+  </ion-fab>
+</ion-content>
